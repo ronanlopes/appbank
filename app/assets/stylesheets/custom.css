@@ -1,0 +1,479 @@
+@font-face{
+  font-family:'Glyphicons Halflings';
+  src:url('glyphicons-halflings-regular.eot');
+  src:url('glyphicons-halflings-regular.eot?#iefix')
+  format('embedded-opentype'),
+  url('glyphicons-halflings-regular.woff')
+  format('woff'),url('glyphicons-halflings-regular.ttf')
+  format('truetype'),url('glyphicons-halflings-regular.svg#glyphicons_halflingsregular')
+  format('svg')
+}
+
+.container {
+  width: 100%;
+}
+
+body {
+  padding-bottom: 200px;
+}
+
+.minicolors-theme-default .minicolors-input {
+  height:34px !important;
+  width:100% !important;
+  padding-left: 34px !important;
+}
+
+.minicolors-theme-default.minicolors {
+  width: 100% !important;
+  display: block !important;
+}
+
+.minicolors-theme-default .minicolors-swatch {
+  top: 8px !important;
+  left: 8px !important;
+  margin-right: 8px !important;
+}
+
+.panel-heading-bold{
+  text-align: center;
+  font-weight: bold;
+  font-size:16px;
+  padding: 10px 15px !important;
+}
+
+.headingprojeto{
+  background-color: #428BCA !important;
+  color: #fff !important;
+}
+
+.panelprojeto{
+  margin-top:20px;
+}
+
+.ticketbuttons a{
+  color:#FFF;
+}
+
+.progress-bar[aria-valuenow="0"] {
+  color: #FFF !important;
+}
+
+.progress-bar-info{
+  background-color: #428BCA !important;
+}
+
+.progress-bar-success{
+  background-color: #5CB85C !important;
+}
+
+.progress-bar[aria-valuenow="0"] {
+  min-width: 0px;
+}
+
+.form-group{
+  margin-left:0px !important;
+  margin-right: 0px !important;
+}
+
+select{
+  color:#333;
+
+}
+
+.headingprojeto a{
+  color:#FFF !important;
+}
+
+.panel-heading a:hover{
+  text-decoration: none !important;
+}
+
+.badge-red{
+  background-color: #B94A48 !important;
+}
+
+li:hover .badge-red{
+  background-color: #992A28 !important;
+}
+
+li:hover .badge-gray{
+  background-color: #aaa !important;
+}
+
+.badge-gray{
+  background-color: #bbb !important;
+}
+
+.form_in_place input{
+  color: #000;
+}
+
+.nav-logo{
+  float:left;
+  height:50px;
+  width: auto;
+  padding: 5px;
+  margin-right: 20px;
+}
+
+.radio, .checkbox {
+  display: block;
+  min-height: 20px;
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  vertical-align: middle;
+}
+
+.radio label, .checkbox label {
+  display: inline;
+  margin-bottom: 0px;
+  font-weight: normal;
+  cursor: pointer;
+  padding-left: 0px;
+}
+
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+  position: relative;
+}
+
+.btn-danger {
+  color: #FFF !important;
+}
+
+.profilepic{
+  margin: 0 auto;
+  border-radius:50%;
+  width:70%;
+  height:auto;
+  display: block;
+}
+
+.textcentered{
+  text-align: center;
+}
+
+.mensagemnaolida{
+  background-color: #f1f1f1;
+}
+
+.mensagemnaolida{
+  font-weight: bold;
+}
+
+.circle{
+  border-radius:50%;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  color: #333;
+  background-color: #FFF;
+  border: 1px solid #ccc !important;
+  display: inline-block;
+  margin-bottom: 0px;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  border-radius: 4px;
+  -moz-user-select: none;
+  margin-bottom: 5px;
+}
+
+.custom-file-upload:hover{
+  background-color: #E6E6E6;
+}
+
+.ticket_ticket_images_image{
+  margin-bottom: 0px;
+}
+
+.user_image{
+  margin-bottom: 0px;
+}
+
+.links{
+  margin-bottom: 30px;
+}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.profileinfo{
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.btn{
+  margin-bottom: 5px !important;
+}
+
+.modal-dialog {
+  width:700px;
+}
+
+.upload-preview img{
+  margin-bottom: 20px;
+}
+
+.ticket-image{
+  width:100px;
+  height:100px;
+  margin-right:20px;
+  border-radius:10px;
+}
+
+
+.mensagenstickets{
+  margin-top:30px;
+}
+
+
+#tarefas tr td:nth-child(2) {
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mensagemlink{
+  color: #333;
+}
+
+.mensagemlink:hover{
+  text-decoration: none;
+  color:#333;
+}
+
+.mensagemlink:active{
+  color:#333;
+}
+
+.mensagemlink:visited{
+  color: #333;
+}
+
+/* CSS used here will be applied after bootstrap.css */
+
+.notification-box {
+  display:inline-block;
+  padding: 15px 10px;
+}
+
+.notification-box a{
+  color: #777;
+  text-decoration: none;
+}
+
+.notification-box a:hover{
+  color: #333;
+  background-color: transparent;
+}
+
+.glyphicon-bell {
+  font-size:1.5rem;
+}
+
+.notifications {
+  min-width:370px;
+}
+
+.notifications-wrapper {
+  overflow:auto;
+  max-height:350px;
+}
+
+.menu-title {
+  color:#B94A48;
+  font-size:1.5rem;
+  display:inline-block;
+}
+
+.glyphicon-circle-arrow-right {
+  margin-left:10px;
+}
+
+
+.notification-heading, .notification-footer  {
+  padding:2px 10px;
+}
+
+
+.dropdown-menu.divider {
+  margin:5px 0;
+}
+
+.item-title {
+  font-size:1.3rem;
+  color:#000;
+}
+
+.notifications a.content {
+  text-decoration:none;
+}
+
+.notification-item {
+  padding:10px;
+  margin:5px;
+  background:#EEE;
+  border-radius:4px;
+  border: solid 2px;
+}
+
+.notification-item h5{
+  text-align: center;
+  font-weight: bold;
+}
+
+.item-info{
+  font-weight: normal;
+  text-align: left;
+}
+
+.item-body{
+  background-color: #FFF;
+}
+
+.content-box{
+  background-color: #F8F8F8;
+  border-radius:10px;
+  padding:20px;
+  border: 1px solid #ddd;
+
+}
+
+.content-box hr{
+  border-color: #DDD;
+}
+
+.filtro-tickets{
+  margin-bottom: 40px;
+}
+
+#filtros a{
+  text-decoration: none;
+}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#acessoform{
+  padding:15px;
+}
+
+
+
+.panel.with-nav-tabs .panel-heading{
+    padding: 5px 5px 0 5px;
+}
+.panel.with-nav-tabs .nav-tabs{
+  border-bottom: none;
+}
+.panel.with-nav-tabs .nav-justified{
+  margin-bottom: -1px;
+}
+/********************************************************************/
+/*** PANEL DEFAULT ***/
+.with-nav-tabs.panel-default .nav-tabs > li > a,
+.with-nav-tabs.panel-default .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > li > a:focus {
+    color: #777;
+}
+.with-nav-tabs.panel-default .nav-tabs > .open > a,
+.with-nav-tabs.panel-default .nav-tabs > .open > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > .open > a:focus,
+.with-nav-tabs.panel-default .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > li > a:focus {
+    color: #777;
+  background-color: #ddd;
+  border-color: transparent;
+}
+.with-nav-tabs.panel-default .nav-tabs > li.active > a,
+.with-nav-tabs.panel-default .nav-tabs > li.active > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > li.active > a:focus {
+  color: #555;
+  background-color: #fff;
+  border-color: #ddd;
+  border-bottom-color: transparent;
+}
+
+.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu {
+    background-color: #f5f5f5;
+    border-color: #ddd;
+}
+.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > li > a {
+    color: #777;   
+}
+.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > li > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > li > a:focus {
+    background-color: #ddd;
+}
+.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > .active > a,
+.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > .active > a:hover,
+.with-nav-tabs.panel-default .nav-tabs > li.dropdown .dropdown-menu > .active > a:focus {
+    color: #fff;
+    background-color: #555;
+}
+
+body {
+overflow-y: scroll;
+}
+
+body.modal-open {
+overflow-y: scroll;
+margin: 0;
+}
+
+.modal {
+overflow: auto;
+}
+
+.confirmation-modal{
+  width: 30%;
+}
+
+.chosen-container-single{
+  height:34px;
+}
+
+.chosen-container-multi .chosen-choices{
+  max-height: 100px;
+  overflow: auto;
+}
+
+.text-wrap{
+  max-width: 220px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sprint-info{
+  font-size: 15.5px;
+}
+
+.pagination{
+  margin: 10px 0px;
+}
+

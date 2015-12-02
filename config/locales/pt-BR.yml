@@ -1,0 +1,1276 @@
+# encoding: UTF-8
+pt-BR:
+  "true": Sim
+  "false": Não
+  date:
+    abbr_day_names:
+    - Dom
+    - Seg
+    - Ter
+    - Qua
+    - Qui
+    - Sex
+    - Sáb
+    abbr_month_names:
+    -
+    - Jan
+    - Fev
+    - Mar
+    - Abr
+    - Mai
+    - Jun
+    - Jul
+    - Ago
+    - Set
+    - Out
+    - Nov
+    - Dez
+    day_names:
+    - Domingo
+    - Segunda
+    - Terça
+    - Quarta
+    - Quinta
+    - Sexta
+    - Sábado
+    formats:
+      default: ! '%d/%m/%Y'
+      long: ! '%d de %B de %Y'
+      short: ! '%d de %B'
+    month_names:
+    -
+    - Janeiro
+    - Fevereiro
+    - Março
+    - Abril
+    - Maio
+    - Junho
+    - Julho
+    - Agosto
+    - Setembro
+    - Outubro
+    - Novembro
+    - Dezembro
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: aproximadamente 1 hora
+        other: aproximadamente %{count} horas
+      about_x_months:
+        one: aproximadamente 1 mês
+        other: aproximadamente %{count} meses
+      about_x_years:
+        one: aproximadamente 1 ano
+        other: aproximadamente %{count} anos
+      almost_x_years:
+        one: quase 1 ano
+        other: quase %{count} anos
+      half_a_minute: meio minuto
+      less_than_x_minutes:
+        one: menos de um minuto
+        other: menos de %{count} minutos
+      less_than_x_seconds:
+        one: menos de 1 segundo
+        other: menos de %{count} segundos
+      over_x_years:
+        one: mais de 1 ano
+        other: mais de %{count} anos
+      x_days:
+        one: 1 dia
+        other: ! '%{count} dias'
+      x_minutes:
+        one: 1 minuto
+        other: ! '%{count} minutos'
+      x_months:
+        one: 1 mês
+        other: ! '%{count} meses'
+      x_seconds:
+        one: 1 segundo
+        other: ! '%{count} segundos'
+    prompts:
+      day: Dia
+      hour: Hora
+      minute: Minuto
+      month: Mês
+      second: Segundo
+      year: Ano
+  errors: &errors
+    format: ! '%{attribute} %{message}'
+    messages:
+      accepted: deve ser aceito
+      blank: não pode ficar em branco
+      confirmation: não está de acordo com a confirmação
+      empty: não pode ficar vazio
+      equal_to: deve ser igual a %{count}
+      even: deve ser par
+      exclusion: não está disponível
+      greater_than: deve ser maior que %{count}
+      greater_than_or_equal_to: deve ser maior ou igual a %{count}
+      inclusion: não está incluído na lista
+      invalid: não é válido
+      less_than: deve ser menor que %{count}
+      less_than_or_equal_to: deve ser menor ou igual a %{count}
+      not_a_number: não é um número
+      not_an_integer: não é um número inteiro
+      odd: deve ser ímpar
+      record_invalid: ! 'A validação falhou: %{errors}'
+      taken: já está em uso
+      too_long: ! 'é muito longo (máximo: %{count} caracteres)'
+      too_short: ! 'é muito curto (mínimo: %{count} caracteres)'
+      wrong_length: não possui o tamanho esperado (%{count} caracteres)
+    template:
+      body: ! 'Por favor, verifique o(s) seguinte(s) campo(s):'
+      header:
+        one: ! 'Não foi possível gravar %{model}: 1 erro'
+        other: ! 'Não foi possível gravar %{model}: %{count} erros.'
+  helpers:
+    select:
+      prompt: Por favor selecione
+    submit:
+      create: Criar %{model}
+      submit: Salvar %{model}
+      update: Atualizar %{model}
+  number:
+    currency:
+      format:
+        delimiter: .
+        format: ! '%u %n'
+        precision: 2
+        separator: ! ','
+        significant: false
+        strip_insignificant_zeros: false
+        unit: R$
+    format:
+      delimiter: .
+      precision: 3
+      separator: ! ','
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: ! '%n %u'
+        units:
+          billion:
+            one: bilhão
+            other: bilhões
+          million:
+            one: milhão
+            other: milhões
+          quadrillion:
+            one: quatrilhão
+            other: quatrilhões
+          thousand: mil
+          trillion:
+            one: trilhão
+            other: trilhões
+          unit: ''
+      format:
+        delimiter: .
+        precision: 2
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: ! '%n %u'
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: .
+    precision:
+      format:
+        delimiter: .
+  support:
+    array:
+      last_word_connector: ! ' e '
+      two_words_connector: ! ' e '
+      words_connector: ! ', '
+  time:
+    am: ''
+    formats:
+      default: ! '%A, %d de %B de %Y, %H:%M h'
+      long: ! '%A, %d de %B de %Y, %H:%M h'
+      short: ! '%d/%m, %H:%M h'
+    pm: ''
+  # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
+  activemodel:
+    errors:
+      <<: *errors
+  activerecord:
+    errors:
+      <<: *errors
+  helpers:
+    actions: "Ações"
+    submit:
+      create: "Criar %{model}"
+      submit: "Salvar %{model}"
+      update: "Atualizar %{model}"
+    titles:
+      new: "Novo %{model}"
+      new_a: "Nova %{model}"
+      edit: "Editar %{model}"
+      update: "Atualizar %{model}"
+      show: "Exibir"
+      destroy: "Excluir %{model}"
+      create: "Salvar %{model}"
+      detailing: "Detalhamento dos %{model}"
+    links:
+      confirm: "Tem certeza que deseja apagar o registro?"
+      new: "Novo"
+      new_a: Nova
+      cancel: "Cancelar"
+      edit: "Editar"
+      edit_spaced: " Editar"
+      update: "Atualizar"
+      show: "Mostrar"
+      show_spaced: " Mostrar"
+      destroy: "Apagar"
+      destroy_spaced: " Apagar"
+      log_spaced: " Log"
+      create: "Salvar %{model}"
+      remove_spaced : " Remover %{model}"
+      add: "Adicionar %{model}"
+      action:
+        new: "Novo"
+        new_a: Nova
+        cancel: "Cancelar"
+        edit: "Editar"
+        update: "Atualizar"
+        show: "Mostrar"
+        destroy: "Apagar"
+        create: "Salvar %{model}"
+  activerecord:
+    models:
+      ofertar_dedicado: 
+        one: Ofertar Veículo
+        other: Ofertar Veículos
+      dedicado: 
+        one: Veículo
+        other: Veículos
+      atuacao_gerencia: Atuação da Gerência  #g
+      destinatario: 
+        one: Destinatário
+        other: Destinatários
+      destinatario_tipo: Tipo do Destinatário  #g
+      fornecedor: 
+        one: Fornecedor
+        other: Fornecedores
+      gerencia: 
+        one: Gerência
+        other: Gerências
+      justificativa: 
+        one: Justificativa
+        other: Justificativas
+      meta: Meta  #g
+      meta_detalhamento: Detalhamento da Meta  #g
+      municipio: 
+        one: Município
+        other: Municípios
+      solicitacao: Solicitação  #g
+      solicitacao_atendimento: Atendimento
+      sucata_tipo: Tipo de Sucata  #g
+      transportadora: 
+        one: Transportadora
+        other: Transportadoras
+      transportadora_filial: Transportadora Filial  #g
+      transporte: 
+        one: Transporte
+        other: Transportes
+      prensa:
+        one: Prensa
+        other: Prensas
+      uf: 
+        one: UF
+        other: UFs
+      meso_regiao:
+        one: Mesorregião
+        other: Mesorregiões
+      user: 
+        one: Usuário
+        other: Usuários
+      veiculo:
+        one: Veículo
+        other: Veículos
+      veiculo_indicador:
+        one: Indicador de Veículo
+        other: Indicadores de Veículo
+      veiculo_tipo: 
+        one: Tipos de veículos
+        other: Tipos de veículos
+      regiao_geografica:
+        one: Região Geográfica
+        other: Regiões Geográficas
+      porto:
+        one: Porto
+        other: Portos
+      navio_viagem:
+        one: Navio
+        other: Navios
+      tipo_container: 
+        one: Tipo de Contêiner
+        other: Tipos de Contêiner
+      modal_transporte:
+        one: Modalidade de Transporte
+        other: Modalidades de Transporte
+      porto_transportadora:
+        one: Cadastro de Proposta
+        other: Cadastro de Propostas
+      cabotagem:
+        one: Cabotagem
+        other: Cabotagem
+      role:
+        one: Perfil
+        other: Perfis
+      porto_origem:
+        one: Porto de Origem
+        other: Portos de Origem
+      porto_destino:
+        one: Porto de Destino
+        other: Portos de Destino
+      ano_feriado:
+        other: Feriados Nacionais (Ano)
+      observacao_follow_ups:
+        other: Observações - Follow Up
+      system_setting:
+        one: Configuração do Sistema
+        other: Configurações do Sistema
+      sistema_feriado:
+        one: Feriado
+        other: Feriados
+      gestao_vista: Gestão a Vista
+      observacao_follow_up:
+        one: Observação - Follow Up
+        other: Observações - Follow Up
+
+    attributes:
+      atuacao_gerencia:
+        gerencia: Gerência  #g
+        uf: UF  #g
+
+      dedicado_livre:
+        solicitacao_atendimento_id: Solicitação Atendimento
+        origem_localizacao: Origem Localização
+        endereco_destino: Destino Localização
+        realizado: Realizado
+        margem: Margem
+
+      relatorio_liberacao:
+        uf_id: UF
+        destinatario_id: Destinatário
+        transportadora_filial: Transportadora Filial
+        endereco: Endereço
+
+      dedicado:
+        destinatario_id: "Usina"
+        transportadora_filial_id: "Transportadora"
+        transportadora_filial_sap: "Sap"
+        tipo_operacao: "Operação"
+        veiculo_tipo_id: "Tipo"
+        localizacao_previsao: "Localização Previsão"
+        destinatario_id: "Destino desejado"
+        numero: "Dedicado"
+        tipo_operacao: "Operação"
+        compartilhar_dedicado: "Compartilhar"
+        previsao: "Data Previsão"
+        localizacao: "Localização"
+        grade: "Grade (m)"
+        acoes: Ações
+      destinatario:
+        bairro: Bairro  #g
+        centro: Centro  #g
+        cep: CEP  #g
+        destinatario_tipo: Tipo de Destinatário #g
+        uf: UF
+        uf_id: UF
+        endereco: Endereço  #g
+        local: Local  #g
+        municipio: Município  #g
+        municipio_id: Município
+        nome: Nome  #g
+        sap: SAP  #g
+        cnpj: CNPJ
+
+      destinatario_tipo:
+        nome: Nome  #g
+
+      fornecedor:
+        apelido: Apelido  #g
+        ativo: Ativo  #g
+        bairro: Bairro  #g
+        cep: CEP #g
+        cnpj: CNPJ  #g
+        uf: UF
+        uf_id: UF
+        endereco: Endereço  #g
+        gerencia: Gerência  #g
+        gerencia_id: Gerência
+        municipio: Município  #g
+        municipio_id: Município
+        razao_social: Razão Social  #g
+        sap: SAP  #g
+        replicar_r_no_s: Replicar R no S
+        validacao_atendimento: Validação Atendimento
+        destinatario_ids: Exceções (Destinatários)
+        user_email_comprador_ids: Recebem e-mail Compradores
+        fornecedor_locais: Outros Locais
+
+      fornecedor_local:
+        cep: CEP
+        endereco: Endereço
+        bairro: Bairro
+        uf_id: UF
+        municipio_id: Município
+        replicar_r_no_s: Replicar R no S
+        validacao_atendimento: Validação Atendimento
+
+      gerencia:
+        atuacao_gerencia: Atuação da Gerência  #g
+        fornecedores: Fornecedores  #g
+        nome: Nome  #g
+        sap: SAP #g
+        sigla: Sigla  #g
+        ufs: UFs  #g
+        uf_ids: UFs
+        user: Responsável  #g
+        user_id: Responsável
+        users: Usuários  #g
+        aprovador_ids: Aprovadores
+        prensa_aprovador_ids: Aprovadores (Prensa)
+        uf_id: UF
+        municipio_id: Município
+
+      justificativa:
+        motivo: Motivo  #g
+        transportes: Transportes  #g
+        logistica: Logística
+        metalicos: Metálicos
+        justificativa_cancelado: Justificativa para o Cancelamento
+        justificativa_cancelado_abreviado: Just. Canc.
+        reprovado_por: Reprovado por
+        status_auditoria: Status da Auditoria
+        aprovacao: Aprovação da Gerência
+        Auditoria: Auditoria
+        aceite_gerencia: Aceite da Gerência
+        updated_by: Atualizado por
+        status_final: Status Final
+
+      aprovacao_justificativa:
+        observacao_aprovacao: Observação
+        observacao_auditoria: Observação
+        observacao_aceitacao: Observação
+
+      meta:
+        ano: Ano  #g
+        destinatario: Destinatário  #g
+        fornecedor: Fornecedor  #g
+        importacao: Importacão  #g
+        mes: Mês  #g
+        meta_detalhamentos: Detalhamentos da Meta  #g
+        peso: Peso  #g
+        solicitacoes: Solicitações  #g
+        transportes: Transportes  #g
+        user: Usuário  #g
+        codigo: Cód.
+        codigo_destinatario: Código do Destinatário
+        codigo_fornecedor: Código do Fornecedor
+        cod_destinatario: Cód. <br/>Destinatário
+        cod_fornecedor: Cód. <br/>Fornecedor
+        cod_dest: Cód. Dest.
+        codigo_forn: Cód. Forn.
+        confirmados: Conf.
+        confirmados_mes: Conf. Mês
+        meta_mes: Meta Mês
+        data_inicio: Data Inicial  #g
+        gerencia: Gerência  #g
+        uf: UF  #g
+        data_fim: Data Final  #g
+        fornecimento: Fornecimento
+        coleta_externa: Coleta Externa
+        uf_id: UF
+
+      meta_detalhamento:
+        meta: Meta  #g
+        qtd: Volume  #g
+        sucata_tipo_id: Nome
+
+      municipio:
+        destinatarios: Destinatários  #g
+        fornecedores: Fornecedores  #g
+        ibge: IBGE  #g
+        lat: Latitude
+        long: Longitude
+        nome: Nome  #g
+        transportadoras: Transportadoras  #g
+        uf: UF  #g
+        uf_nome: UF 
+        meso_regiao: Mesorregião
+        meso_regiao_nome: Mesorregião
+        regiao_geografica: Região Geográfica
+        regiao_geografica_nome: Região Geográfica
+        fuso_horario: Fuso Horário
+
+      meso_regiao:
+        municipio_ids: Municípios
+
+      observacao_follow_up:
+        hora_inicio_follow_up: Hora Início
+        hora_fim_follow_up: Hora Fim
+        confirmado_follow_up: Confirmação
+
+      solicitacao:
+        data: Data  #g
+        meta: Meta  #g
+        qtd: Quantidade  #g
+        transportes: Transportes  #g
+        user: Usuário  #g
+        inicio_programado: Data do Programado
+        replicar_rodoviario: Replicar Rodoviário
+        replicar_cabotagem: Replicar Cabotagem
+        replicar_data_inicio: Data Início
+        replicar_data_fim: Data Fim
+        replicar_qtd: Quantidade
+        replicar_atendimento_normal: Replicar Atend. Normal
+        replicar_incluir_sabado: Incluir Sábado
+        replicar_incluir_domingo: Incluir Domingo
+        data_solicitado: Data do Solicitado
+        consulta: Log da Programação
+        fornecedor_codigo: Cód. Forn.
+        fornecedor_sap: Cód. <br/>Forn.
+        destinatario_sap: Cód. <br/>Dest.
+        municipio: Município
+        fornecedor_uf_sigla: UF
+        fornecedor_municipio: Município
+
+      solicitacao_sucata:
+        sucata_tipo: Tipo
+        sucata_tipo_prensa: Tipo
+        sucata_tipo_id: Tipo de Sucata
+        categoria: Categoria do Veículo
+        veiculo_categorias: Categoria do Veículo
+        _veiculo_categorias: Categoria do Veículo
+        qtd: Transportes
+        antecipado: Atendimento Antecipado
+
+      solicitacao_sucata_atendimento:
+        atendimento: Atendimento
+        veiculo_categoria: Categoria do Veículo
+        none_atendimento: Nenhuma Atendimento
+        justificativa_cancelado: Justificativa
+
+      solicitacao_atendimento:
+        atendimento: Atendimento
+        veiculo_categoria: Categoria do Veículo
+        none_atendimento: Nenhum Atendimento
+        justificativa_cancelado: Justificativa
+        number: Nº
+        number_to_s: Número
+        sucata_tipo: Tipo de Sucata
+        transporte_prensado: Transporte Prensado?
+        observacao: Observação
+        observacao_justificativa: Observação
+
+      sucata_tipo:
+        nome: Nome  #g
+
+      system_setting:
+        prazo_maximo_programado: Prazo para Programar
+        prazo_maximo_programado_offset: Deslocamento (dias)
+        prazo_solicitar_antecipado: Prazo para S Antecipado
+        prazo_solicitar_antecipado_offset: Deslocamento (dias)
+        prazo_solicitar_reprogramado: Prazo para S Reprogramado
+        prazo_solicitar_reprogramado_offset: Deslocamento (dias)
+        prazo_aprovar_antecipado: Prazo Aprovação Antecipado
+        prazo_aprovar_antecipado_offset: Deslocamento (dias)
+        prazo_aprovar_reprogramado: Prazo Aprovação Reprogramado
+        prazo_aprovar_reprogramado_offset: Deslocamento (dias)
+
+
+      transportadora:
+        apelido: Apelido  #g
+        ativo: Ativo  #g
+        razao_social: Razão Social  #g
+        transportadora_filiais: Filiais da Transportadora  #g
+        users: Usuários  #g
+
+      transportadora_filial:
+        cnpj: CNPJ  #g
+        email: E-mail  #g
+        municipio: Município  #g
+        uf: UF
+        uf_id: UF
+        nome: Nome  #g
+        responsavel: Responsável  #g
+        telefone: Telefone  #g
+        sap: SAP  #g
+        ufs: Regiões de Atendimento
+        tempo_permanencia_atraso: Tempo de Permanência (hs)
+
+      transporte:
+        confirmado: Confirmado  #g
+        destinatario: Destinatário  #g
+        fornecedor: Fornecedor  #g
+        inicio_programado: Início Programado  #g
+        inicio_realizado: Início Realizado  #g
+        justificativa: Justificativa  #g
+        numero: Nº do Transporte #g
+        numero_to_s: Número do Transporte
+        observacao: Observacao  #g
+        solicitacao: Solicitação  #g
+        transportadora_filial: Transportadora Filial  #g
+        user: Usuário  #g
+        veiculo_tipo: Tipo de Veículo  #g
+        sucata_tipo_prensa: Tipo
+        sucata_tipo: Tipo de Sucata
+        tf_nome: Transportadora
+        v_nome: Veículo
+        programado: Programado
+        realizado: Realizado
+        justificativa_motivo: Motivo #g
+        tipo_transporte: Tipo de Transporte
+        justificativa_nome: Justificativa
+        tipo_sucata: Tipo de Sucata
+        sucata_tipo_id: Tipo de Sucata
+        opcoes: Opção
+        replicar_dias: Replicar em dias futuros
+        replicar_data_inicio: Data Início
+        replicar_data_fim: Data Fim
+        replicar_qtd: Quantidade
+        replicate_in_s: Replicar no S
+        s_veiculo_categorias: Categoria do Veículo (S)
+        observacao: Observação
+        observacao_r: Observação
+        observacao_no_r: Observação no R
+        transporte_prensado: Transporte Prensado?
+        sap: SAP
+        fornecedor_sap: Cód. <br/>Forn.
+        veiculo_sap: Cód. <br/>Veículo
+        status: Situação
+        none_justificativa: Nenhuma Justificativa
+        _atendimentos: Atendimentos da Solicitação
+        fator_veiculo: Fator de Veículo
+        justificativa_responsabilidade_nome: Responsabilidade
+        justificativa_cancelado: Justificativa
+        none_transporte: Nenhum Transporte
+        time_data_agendada: Hora Agendada
+        observacao_no_p: Observação no Programado
+        nao_programado: Não Programado
+        justificado_p: Justificado no P
+        justificado_r: Justificado no R
+        justificativa_data: Data da Justificativa
+        confirmado_follow_up: Confirmação - Follow Up
+        observacao_follow_up_id: Observação - Follow Up
+        email_follow_up: Email - Follow Up
+        veiculo_liberado: Veículo Liberado
+        confirmado_follow_up: Confirmação
+        cancelar_ordem_de_coleta: C.O.C.
+
+      uf:
+        id: IBGE
+        gerencias: Gerências  #g
+        ibge: IBGE  #g
+        municipios: Municípios  #g
+        nome: Nome  #g
+        sigla: Sigla  #g
+        regiao_geografica_nome: Região Geográfica
+        regiao_geografica_id: Região Geográfica
+        responsavel_stratum_nome: Responsável Apoio
+        responsavel_stratum_id: Responsável Apoio
+        responsavel_logistica_nome: Responsável Logística
+        responsavel_logistica_id: Responsável Logística
+
+      regiao_geografica:
+        ufs: UFs
+        uf_ids: UFs
+
+      porto:
+        uf: UF
+        uf_id: UF
+        municipio: Município
+        municipio_id: Município
+
+      user:
+        mailers_mask: E-mails
+        gerencias: Gerências
+        ativo: Ativo  #g
+        current_sign_in_at: Logado em  #g
+        current_sign_in_ip: IP atual  #g
+        email: E-mail  #g
+        encrypted_password: encrypted_password  #g
+        gerencia: Gerência  #g
+        last_sign_in_at: Último Login  #g
+        last_sign_in_ip: Último IP  #g
+        metas: Metas  #g
+        nome: Nome  #g
+        permissoes: Permissões  #g
+        remember_created_at: remember_created_at  #g
+        reset_password_sent_at: reset_password_sent_at  #g
+        reset_password_token: reset_password_token  #g
+        old_role: Perfil Antigo
+        role: Perfil  #g
+        solicitacoes: Solicitações  #g
+        telefone: Telefone  #g
+        transportadora: Transportadora  #g
+        transportadora_filiais: Transportadoras Filiais #g
+        transportes: Transportes  #g
+        sign_in_count: Logins
+        created_at: Data de Cadastro
+        sap: SAP
+        reset_password_token: Token
+        aprovacao_gerencias_normal: Aprovador nas Gerências (Normal)
+        aprovacao_gerencias_prensa: Aprovador nas Gerências (Prensa)
+
+      veiculo_tipo:
+        nome: Nome  #g
+        peso: Peso  #g
+        sap: SAP
+        transportes: Transportes  #g
+        veiculo_indicador_id: Indicador de Veículo
+
+      porto_transportadora:
+        modal_transporte: Modalidade de Transporte
+        modal_transporte_id: Modalidade de Transporte
+        tipo_container: Tipo de Contêiner
+        tipo_container_id: Tipo de Contêiner
+        transportadora_filial: Transportadora Filial
+        transportadora_filial_id: Transportadora Filial
+
+      cabotagem:
+        data_solicitacao: Data da Solicitação
+        booking: Booking
+        navio_viagem_id: Navio
+        modal_transporte_id: Modal de Transporte
+        porto_origem_id: Porto de Origem
+        porto_destino_id: Porto de Destino
+        fornecedor_id: Fornecedor
+        destinatario_id: Destinatário
+        date_data_agendada: Data Agendada
+        time_data_agendada: Hora Agendada
+        data_chegada: Data Chegada
+        hora_chegada: Hora Chegada
+        data_retirada: Data Retirada
+        hora_retirada: Hora Retirada
+        ativo: Ativo?
+        transportadora_filial_nome: Transportadora Filial
+        porto_origem_uf_nome: UF (Porto de Origem)
+        porto_origem_municipio_nome: Município (Porto de Origem)
+        porto_destino_uf_nome: UF (Porto de Destino)
+        porto_destino_municipio_nome: Município (Porto de Destino)
+        fornecedor_cnpj: CNPJ Remetente
+        fornecedor_uf_nome: UF (Fornecedor)
+        fornecedor_municipio_nome: Município (Fornecedor)
+        destinatario_cnpj: CNPJ Destinatário
+        destinatario_uf_nome: UF (Destinatário)
+        destinatario_municipio_nome: Município (Destinatário)
+        tipo_container_id: Tipo do Contêiner
+        tempo_permanencia: Tempo Permanência
+        data_deadline: Data Deadline Entrega da Carga
+        hora_deadline: Hora Deadline Entrega da Carga
+        data_prevista_chegada: Data Prevista de Chegada do Navio
+        hora_prevista_chegada: Hora Prevista de Chegada do Navio
+        data_prevista_saida: Data Prevista de Saída do Navio (Origem)
+        hora_prevista_saida: Hora Prevista de Saída do Navio (Origem)
+        tempo_maximo: Tempo Máx Carreta (Dias)
+        free_time: Free Time (Dias)
+        valor_diaria: Diária
+        dias_permanencia: Dias Permanência
+        transporte_observacao: Observação (Transporte)
+        descricao_avaria: Descrição da Avaria
+        cnpj_fornecedor: CNPJ do Fornecedor
+        ctac: CTAC
+        cntr: CNTR
+        nf_am: NF AM
+        data_entrega: Data Entrega
+        hora_entrega: Hora Entrega
+        data_entr_coord: Data Entrada Coord.
+        hora_entr_coord: Hora Entrada Coord.
+        data_liberado: Data Liberado
+        hora_liberado: Hora Liberado
+        data_chegada_transportadora: Data Chegada p/ Transp.
+        hora_chegada_transportadora: Hora Chegada p/ Transp.
+        data_entrada_usina: Data Entrada Usina
+        hora_entrada_usina: Hora Entrada Usina
+        data_balanca: Data Balança
+        hora_balanca: Hora Balança
+        data_saida_balanca: Data Saída Balança
+        hora_saida_balanca: Hora Saída Balança
+        data_saida_usina: Data Saída Usina
+        hora_saida_usina: Hora Saída Usina
+        data_saida_transportadora: Data Saída Transp.
+        hora_saida_transportadora: Hora Saída Transp.
+        saldo_transportadora: Saldo Transp.
+        brm: BRM
+        observacoes: Observações
+        valor: Valor Excedente Carreta
+
+      tipo_container:
+        dimensao_interna: Dimensão Interna
+        largura: Largura (m)
+        altura: Altura (m)
+        comprimento: Comprimento (m)
+        capacidade_m: Capacidade (m³)
+        capacidade: Capacidade (kg)
+        title_peso: Peso
+        peso: Peso (kg)
+        peso_total: Peso Total (kg)
+
+      porto_origem:
+        porto: Porto
+        tempo_max_h: Tempo Máx / Car. + Cav. (hs)
+        valor_h: Valor Hora Excedente (R$)
+        tempo_max_d: Tempo Máx Carreta (dias)
+        valor_d: Valor Diária Carreta (R$)
+        tempo_max_demurrage: Demurrage (dias)
+        valor_demurrage: Valor Demurrage (R$)
+
+      porto_destino:
+        porto: Porto
+        tempo_max_d: Tempo Máx Carreta (dias)
+        valor_d: Valor Diária Carreta (R$)
+        tempo_max_demurrage: Demurrage (dias)
+        valor_demurrage: Valor Demurrage (R$)
+
+      modal_transporte:
+        descricao: Descrição
+
+      ano_feriado:
+        dia_mes: Dia / Mês
+
+      sistema_feriado:
+        carregamento: Considera Carregamento?
+        carregamento_to_s: Considera Carregamento?
+
+  activemodel:
+    attributes:
+      meta_filtro:
+        transportadora_id_in: Transportadoras
+        solicitacoes_data_gteq: Data Início
+        solicitacoes_data_lteq: Data Fim
+        fornecedor_municipio_uf_id_in: UF
+        fornecedor_regiao_geografica: Região Geográfica
+        fornecedor_municipio_id_in: Município
+        fornecedor_id_in: Fornecedor
+        destinatario_id_in: Destinatário
+        fornecedor_gerencia_id_in: Gerência
+        comprador_id_in: Comprador
+        prensa_id_present: Prensa
+        solicitacoes_tipo_id_in: Tipo de Solicitações
+        has_s_sucata_tipo_id_in: Tipo de Sucata (S)
+        has_veiculo_categoria_id_in: Categoria de Veículo (S)
+        has_s_greater_than_p_present: S > P
+        solicitacoes_data_gteq_full: Data Início (Solicitação)
+        solicitacoes_data_lteq_full: Data Fim (Solicitação)
+        transportes_justificado_em_gteq: Data Início (Justificativa)
+        transportes_justificado_em_lteq: Data Fim (Justificativa)
+        status_aprovacao_justificativa: Status (Aprovação)
+        status_auditoria_justificativa: Status (Auditoria)
+        status_aceitacao_justificativa: Status (Aceite)
+        status_justificativa_final: Status Final
+        municipio_id_in: Município
+        municipio_uf_id_in: UF
+
+      cabotagem_filtro:
+        solicitacoes_data_gteq: Data Início (Solicitação)
+        solicitacoes_data_lteq: Data Fim (Solicitação)
+        fornecedor_municipio_uf_id_eq: UF (Fornecedor)
+        fornecedor_regiao_geografica: Região Geográfica (Fornecedor)
+        data_retirada_gteq: Data Início (Retirada)
+        data_retirada_lteq: Data Fim (Retirada)
+        hora_retirada_gteq: Hora Início (Retirada) **
+        hora_retirada_lteq: Hora Fim (Retirada) **
+        fornecedor_gerencia_id_in: Gerência
+        fornecedor_id_in: Fornecedor
+        destinatario_id_in: Destinatário
+        tipo_container_id_in: Tipo de Contêiner
+        sinal_saldo_transportadora: Sinal Saldo Transp.
+        sinal_tempo_permanencia: Sinal Tempo de Permanência
+        brm_cont: BRM
+        nf_am_cont: NF AM
+        cntr_cont: CNTR
+        brm_present: Tem BRM?
+        realizado_present: Realizado?
+        nf_am_present: Tem NF AM?
+        navio_cont: Navio
+        booking_cont: Booking
+        justificativa_present: Justificado?
+        ativo_eq: Ativo?
+        transportadora_filial_id_in: Transportadora Filial
+
+      transporte_filtro:
+        transportadora_filial_id_in: Transportadora
+        solicitacao_meta_fornecedor_id_in: Fornecedor
+        solicitacao_meta_fornecedor_municipio_uf_id_in: UF
+        fornecedor_regiao_geografica: Região Geográfica
+        solicitacao_meta_fornecedor_municipio_id_in: Município
+        solicitacao_meta_destinatario_id_in: Destinatário
+        veiculo_tipo_id_in: Veículo
+        numero_cont: Transporte
+        solicitacao_data_gteq: Data Início (Programado)
+        solicitacao_data_lteq: Data Fim (Programado)
+        sucata_tipo_id_in: Tipo de Sucata
+        sucata_tipo_prensa_id_present: Transporte Prensado?
+        justificativa_id_in: Justificativa
+        solicitacao_meta_fornecedor_gerencia_id_in: Gerência
+        etapa_in: Etapa
+        status_in: Status
+        sucata_tipo_prensa_eq: Transporte Prensado?
+        solicitacao_meta_municipio_id_in: Município
+        solicitacao_meta_municipio_uf_id_in: UF
+        confirmado_follow_up_in: Confirmado - Follow Up
+        observacao_follow_up_id_in: Observação - Follow Up
+
+      dedicado_filtro:
+        numero_cont: Dedicado
+        previsao_gteq: Data de previsão
+        grade_eq: Altura grade
+
+      solicitacao_busca_individual:
+        meta_fornecedor_id_eq: Fornecedor
+        meta_destinatario_id_eq: Destinatário
+        data_eq: Data
+
+      relatorio:
+        user_transporte: Usuário
+        transportadora_filial_transporte: Transportadora Filial
+        view_only_days_with_data: Somente dias com dados
+
+
+  simple_form:
+    labels:
+      defaults:
+        data_inicio: Data Início
+        data_fim: Data Fim
+        regiao_geografica: Região Geográfica
+        uf: UF
+        meso_regiao: Mesorregião
+        municipio: Município
+        responsavel_logistica: Responsável Logística
+        responsavel_apoio: Responsável Apoio
+        gerencia: Gerência
+        fornecedor: Fornecedor
+        destinatario: Destinatário
+        sinal_volume: Sinal Volume
+        sinal_veiculo: Sinal Veículo
+        tipo_container: Tipo de Contêiner
+        sinal_tempo_permanencia: Sinal Tempo de Permanência
+        export_excel: Exportar para Excel
+        filtros: Filtros
+    buttons:
+      gerar: Gerar
+      filtrar: Filtrar
+      buscar: Buscar
+    all:
+      m: Todos
+      f: Todas
+    none:
+      m: Nenhum
+      f: Nenhuma
+    error_notification: 
+      default_message: "Favor revisar os problemas abaixo:"
+
+  relatorio:
+    title: Gerar Relatório de %{name}
+    name:
+      atendimento: Atendimento
+      atendimento_diario: Atendimento Diário
+      atendimento_diario_memoria: Memória do Atendimento Diário
+      atendimento_diario_memoria_minerio: Memória do Atendimento Diário - Minério
+      execucao_programacao: Execução de Programação
+      inclusao_metas: Inclusão de Metas
+      somatorio_volume: Somatório de Volume
+      justificativas: Justificativas
+      frequencia_solicitados: Frequência de Solicitados
+      vendor_rating_transportadora: Vendor Rating Transportadora
+      solicitacoes_por_data_inserida: Solicitações por Data Inserida
+      realizados_no_horario: Realizados no Horário (12hs)
+      conf_call: Conf Call
+      compradores: Compradores
+
+  menu:
+    cadastros: Cadastros
+    locais: Locais
+    sistema: Sistema
+    cabotagem: Cabotagem
+    programacoes: Programações
+    importar: Importar
+    relatorios: Relatórios
+    consultas: Consultas
+
+  programacoes:
+    programacao: Programação
+    prensa: Prensa
+    minerio: Programação - Minério
+    painel_controle: Painel de Controle
+    editar_meta: Editar Meta
+    pontos_criticos: Pontos Críticos (Atend. < 95%)
+    justificativas_metalicas: Justificativas Metálicas
+    painel_indicadores: Painel de Indicadores
+    email_follow_up: Follow Up
+
+  workflow_extras:
+    index: Workflow - Extras
+
+  workflow_antecipados:
+    index: Workflow - Antecipados
+
+  workflow_reprogramados:
+    index: Workflow - Reprogramados
+
+  workflow_carregamento_antecipados:
+    index: Workflow - Carregamento Antecipado
+
+  consultas:
+    mapa_transportadoras: Mapa de Transportadoras
+
+  permissions:
+    name: Permissões
+    custom: Permissões personalizadas
+
+    context:
+      application: 
+        name: Geral
+      cadastros:
+        name: Cadastros
+        user_management:
+          name: Usuários
+        perfis:
+          name: Perfis
+        locais:
+          name: Locais
+          gerencias:
+            name: Gerências
+          fornecedores:
+            name: Fornecedores
+          destinatarios:
+            name: Destinatários
+          compradores:
+            name: Compradores
+        sistema:
+          name: Sistema
+          prensas:
+            name: Prensas
+          justificativas:
+            name: Justificativas
+          veiculo_tipos:
+            name: Veículos
+          veiculo_indicadores:
+            name: Indicadores de Veículos
+          ufs:
+            name: UFs
+          regiao_geograficas:
+            name: Regiões Geográficas
+          meso_regioes:
+            name: Mesorregiões
+          municipios: 
+            name: Municípios
+          ano_feriados:
+            name: Feriados Nacionais (Ano)
+          sistema_feriados:
+            name: Feriados
+          veiculos:
+            name: Veículos
+          observacao_follow_ups:
+            name: Observações - Follow Up
+          system_settings:
+            name: Configurações de Sistema
+        cabotagem:
+          name: Cabotagem
+          portos:
+            name: Portos
+          navio_viagens:
+            name: Navios
+          tipo_containeres:
+            name: Tipos de Contêiner
+          porto_transportadoras:
+            name: Cadastro de Proposta
+          modal_transportes:
+            name: Modalidades de Transporte
+        transportadoras:
+          name: Transportadoras
+      programacoes: 
+        name: Programações
+        programacao:
+          name: Programação Metálicos
+          normal:
+            name: Transporte Normal
+          prensado:
+            name: Transporte Prensado
+        minerio:
+          name: Programação Minério
+        prensa:
+          name: Prensa
+        painel_controle:
+          name: Painel de Controle
+        painel_controle_minerio:
+          name: Painel de Controle - Minério
+        cabotagem:
+          name: Cabotagem
+        cabotagem_destinatario:
+          name: Cabotagem - Destinatário
+        editar_meta:
+          name: Editar Meta
+        justificativas_metalicas: 
+          name: Justificativas Metálicas
+      consultas:
+        name: Consultas
+        pontos_criticos: 
+          name: Pontos Críticos (Atend. < 95%)
+        mapa_transportadoras:
+          name: Mapa de Transportadoras
+        transportes:
+          name: Transportes
+        transportes_minerio:
+          name: Transportes Minério
+        consulta_solicitacao: 
+          name: Log da Programação
+        relatorios:
+          name: Relatórios
+          atendimento:
+            name: Atendimento
+          atendimento_diario:
+            name: Atendimento Diário
+          atendimento_diario_memoria:
+            name: Memória do Atendimento Diário
+          atendimento_diario_memoria_minerio:
+            name: Memória do Atendimento Diário - Minério
+          execucao_programacao:
+            name: Execução de Programação
+          inclusao_metas: 
+            name: Inclusão de Metas
+          somatorio_volume:
+            name: Somatório de Volume
+          justificativas:
+            name: Justificativas
+          frequencia_solicitados:
+            name: Frequência de Solicitados
+          vendor_rating_transportadora:
+            name: Vendor Rating Transportadora
+          realizados_no_horario:
+            name: Realizados no Horário (12hs)
+          solicitacoes_por_data_inserida:
+            name: Solicitações por Data Inserida
+          conf_call:
+            name: Conf Call
+          compradores:
+            name: Compradores
+      importar:
+        name: Importar
+        meta:
+          name: Metas
+        brm:
+          name: BRM
+        realizados:
+          name: Realizados
+      dedicados:
+        name: Dedicados
+        dedicados:
+          name: Dedicados
+        mapa_geral: 
+          name: Ver mapa geral
+        mapa: 
+          name: Ver posição
+        ofertar_dedicados: 
+          name: Ofertar Dedicado
+        atualizar_pontos_mapa: 
+          name: Atualizar Posição
+      tipos_de_acesso:
+        name: Tipos de Acesso
+      workflow_antecipados:
+        name: Workflow de Solicitações Antecipadas
+      workflow_reprogramados:
+        name: Workflow de Solicitações Reprogramadas
+      workflow_carregamento_antecipados:
+        name: Workflow de Carregamentos Antecipados
+
+
+    actions:
+      is_metalicos: Metálicos
+      is_minerio: Minério
+      manage_all: Administrador
+      has_gerencias: Com Gerências
+      has_destinatarios: Com Destinatários
+      has_fornecedores: Com Fornecedores
+      has_ufs: Com Estados (válido apenas para aprovação do workflow de antecipados)
+      is_transportadora: Transportadora
+      is_comprador: Comprador
+      read_index: Visualizar Tela
+      index: Visualizar Tela
+      aprovar: Aprovar
+      read_edit: Visualizar Edição
+      read_log: Visualizar Log
+      create: Criar
+      update: Editar
+      destroy: Excluir
+      add_prensa: Adicionar Prensa
+      report: Gerar relatório
+      get: Exportar
+      upload: Importar
+      add_fornecedor: Adicionar Fornecedor
+      read_solicitar: Visualizar Solicitados
+      update_solicitar: Editar Solicitados
+      read_confirmar: Visualizar Confirmados
+      update_confirmar: Editar Confirmados
+      read_programar: Visualizar Programados
+      update_programar: Editar Programados
+      read_realizados: Visualizar Realizados
+      update_realizados: Editar Realizados
+      importar_realizados: Importar Realizados
+      painel_controle_minerio: Painel de Controle - Minério
+      programar_cabotagem: Programar Cabotagem
+      programar_rodoviario: Programar Rodoviário
+      cancelar_ordem_de_coleta: Cancelar Ordem de Coleta
+      view_transporte_tipo: Visualizar Tipo de Transporte
+      read_metas_com_transportadora_usuario: Visualizar apenas as metas da transportadora
+      read_metas_sem_prensa: Visualizar metas sem prensa
+      read_metas_sem_destinatarios_usuario: Visualizar metas com destinatário não vinculado ao usuário
+      read_metas_sem_fornecedores_usuario: Visualizar metas com fornecedor não vinculado ao usuário
+      read_metas_sem_gerencias_usuario: Visualizar metas com gerência não vinculada ao usuário
+      edit_metas_sem_prensa: Editar metas sem prensa
+      edit_metas_sem_destinatarios_usuario: Editar metas com destinatário não vinculado ao usuário
+      edit_metas_sem_fornecedores_usuario: Editar metas com fornecedor não vinculado ao usuário
+      edit_metas_sem_gerencias_usuario: Editar metas com gerência não vinculada ao usuário
+      read_transportes_sem_transportadoras_filiais_usuario: Visualizar transportes com transportadoras filiais não vinculadas ao usuário
+      read_transportes_sem_fornecedores_usuario: Visualizar transportes com fornecedor não vinculado ao usuário
+      destroy_realizados_d1: Excluir realizados com data do programado do dia ou dia-1
+      replicate_r_to_s: Replicar R no S
+      approve: Aprovar
+      audit: Auditar
+      replicar_selecionados_s: Replicar solicitados em outros dias
+      liberar_veiculo: Liberar Veículos
+      read_sem_fornecedores_usuario: Visualizar fornecedores não vinculados ao usuário
+      read_sem_destinatarios_usuario: Visualizar destinatários não vinculados ao usuário
+      read_sem_transportadora_usuario: Visualizar transportadoras não vinculadas ao usuário
+      read_outros_compradores: Visualizar compradores (sem vínculo ao usuário)
+      approve_audit_usuario_nao_aprovador: Exibir dados com usuário não vinculado aos aprovadores
+      observar_follow_up: Observação - Follow Up
+      confirmar_follow_up: Confirmação - Follow Up
+      email_follow_up: Email - Follow Up (Consolidado)
+      receber_email_follow_up: Receber Notificações - Follow Up (por Gerência)
+  wiki:
+    create_new_page: Criar nova página
+    pages: Páginas
+    home: Página Inicial
+    new_page: Nova página
+    edit: Editar
+    rename: Renomear
+    history: Histórico
+    last_edited_by: Última edição por
+    confirm_delete: Tem certeza que deseja apagar a página?
+    delete_page: Excluir página
+    search: Procurar
+    search_title: Procurar no wiki
+
+  buttons:
+    add_fornecimento: Inserir Fornecimento
+
+  none_data: Nenhum
+
+
