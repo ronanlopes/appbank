@@ -29,8 +29,7 @@ class Conta < ActiveRecord::Base
   end
 
   def extrato(data_inicio, data_fim)
-    movimentacao.where()
   end
 
-  
+
 end
