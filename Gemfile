@@ -25,7 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 gem 'slim-rails'
-gem "twitter-bootstrap-rails"
+gem "twitter-bootstrap-rails", :git => 'http://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'simple_form'
 gem 'thin'
 gem 'rails_12factor', group: :production
