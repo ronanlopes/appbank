@@ -4,7 +4,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use postgresql as the database for Active Record
-gem 'ruby', '2.2.2'
 gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -29,6 +28,8 @@ gem 'slim-rails'
 gem "twitter-bootstrap-rails", :git => 'http://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'simple_form'
 gem 'thin'
+gem 'rails_12factor', group: :production
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -52,3 +53,4 @@ group :development do
   gem 'spring'
 end
 
+ruby "2.2.2"
