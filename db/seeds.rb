@@ -6,6 +6,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 begin
-  User.create(id: 1, nome: "Administrador", email: "admin@admin.com", password: "admin123", password_confirmation: "admin123")
+  User.create(nome: "Administrador", email: "admin@admin.com", password: "admin123", password_confirmation: "admin123")
+rescue
+end
+
+begin
+  TipoMovimentacao.create(nome: "Saque")
+  TipoMovimentacao.create(nome: "Depósito")
+  TipoMovimentacao.create(nome: "Transferência")
 rescue
 end
