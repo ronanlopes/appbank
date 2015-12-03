@@ -20,9 +20,24 @@ class ContasController < ApplicationController
   end
 
   def extrato_index
-    data_inicio = params[:extrato][:data_inicio].try(:to_datetime) if params[:extrato]
-    data_fim = params[:extrato][:data_fim].try(:to_datetime) if params[:extrato]
-    @movimentacoes = current_user.conta.extrato(data_inicio, data_fim)
+    if params[:extrato]
+      d1, m1, y1 = params[:extrato][:data_inicio].split("/").map(&:to_i)
+      d2, m2, y2 = params[:extrato][:data_fim].split("/").map(&:to_i)
+
+      if (d1 && m1 && y1) && !Date.valid_date?(y1,m1,d1) || (d2 && m2 && y2) && !Date.valid_date?(y2,m2,d2) 
+        redirect_to extrato_index_path, flash: {error: "Formato de data inválido. Favor utilizar dd/mm/aaaa" }
+      elsif (!d1 || !m1 || !y1 || !d2 || !m2 || !y2)
+        redirect_to extrato_index_path, flash: {error: "Formato de data inválido. Favor utilizar dd/mm/aaaa" }
+      else  
+        @data_inicio = params[:extrato][:data_inicio].try(:to_datetime)
+        @data_fim = params[:extrato][:data_fim].try(:to_datetime)
+      end
+    end
+    if (!@data_inicio || !@data_fim)
+      @data_inicio = DateTime.now.strftime("01/%m/%Y").to_datetime
+      @data_fim = DateTime.now
+    end
+    @movimentacoes = current_user.conta.extrato(@data_inicio, @data_fim).sort_by(&:created_at)
   end
 
   def minha_conta_index
