@@ -33,7 +33,7 @@ html lang="en"
                 li= link_to "<span class=\"glyphicon glyphicon glyphicon-circle-arrow-right\"></span> Depósito".html_safe, deposito_index_path
                 - if current_user
                   li= link_to "<span class=\"glyphicon glyphicon glyphicon-circle-arrow-right\"></span> Transferência".html_safe, transferencia_index_path
-                  li= link_to "<span class=\"glyphicon glyphicon glyphicon-circle-arrow-right\"></span> Extrato".html_safe, extrato_index_path
+                  li= link_to "<span class=\"glyphicon glyphicon glyphicon-circle-arrow-right\"></span> Extrato por período".html_safe, extrato_index_path
             - if current_user
               li= link_to "<span class=\"glyphicon glyphicon-user\"></span> Minha Conta".html_safe, minha_conta_index_path              
               li= link_to "<span class=\"glyphicon glyphicon-off\"></span> Sair".html_safe, destroy_user_session_path,:method => :delete
