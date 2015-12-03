@@ -1,5 +1,5 @@
 h3 Saque
 = simple_form_for @saque, url: realizar_saque_path do |f|
   = f.input :valor
-  = f.submit
+  = f.submit "Realizar Saque", class: 'btn-primary'
 end

@@ -1,6 +1,8 @@
 h3 Transferência
 = simple_form_for @transferencia, url: realizar_transferencia_path do |f|
-  = f.association :conta_destino, collection: Conta.ativo, label_method: lambda {|conta| conta.user.nome}, include_blank: false
+  = f.association :conta_destino, collection: Conta.ativo, label_method: lambda {|conta| conta.user.nome}, include_blank: false, input_html: {class: 'chosen-select'}
   = f.input :valor
-  = f.submit
+  = f.button :submit, class: 'btn-primary' do
+    Realizar Transferência
+  end
 end

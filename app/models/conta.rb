@@ -35,7 +35,7 @@ class Conta < ActiveRecord::Base
       return exception.message
   end
 
-  def horario_comercial
+  def self.horario_comercial
     hora = DateTime.now.hour
     if Array(2..6).include? DateTime.now.wday && (hora >= 9 && hora <= 18)
       return true

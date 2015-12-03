@@ -1,0 +1,25 @@
+//= require jquery
+//= require jquery_ujs
+//= require turbolinks
+//= require twitter/bootstrap
+//= require chosen-jquery
+//= require meiomask
+//= require_tree .
+
+
+@atualizar_chosen = () ->
+  $('.chosen-select').chosen('destroy').chosen
+    placeholder_text_single: 'Selecione'
+    no_results_text: 'Nenhum resultado encontrado'
+    placeholder_text_multiple: 'Selecione'
+
+
+#Adicionar inicializações nesta função para compatibilidade com o turbolinks
+@do_on_load = () ->
+  $.mask.masks.date = { mask : '39/19/9999' }
+  atualizar_chosen()
+
+$ ->
+  do_on_load()
+  $(window).bind('page:change', do_on_load)
+  

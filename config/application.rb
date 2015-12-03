@@ -21,6 +21,7 @@ module Appbank
 
     config.exceptions_app = self.routes
 
+    config.serve_static_files = true
 
     if Rails.env.production?
       # config.action_mailer.smtp_settings = {
