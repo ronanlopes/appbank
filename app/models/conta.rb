@@ -1,13 +1,13 @@
 class Conta < ActiveRecord::Base
 
-  default_scope { where(ativo: true) }
   belongs_to :user
 
+  scope :ativo, -> { where(ativo: true) }
   #Verificar i18n
   validates :saldo, :numericality => { :greater_than_or_equal_to => 0 }
 
   def saldo_to_s
-    "R$ #{self.saldo/100}"
+    "R$ #{self.saldo/100},00"
   end
 
   def movimentacoes

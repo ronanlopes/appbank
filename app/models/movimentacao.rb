@@ -7,5 +7,9 @@ class Movimentacao < ActiveRecord::Base
   validates :tipo_movimentacao_id, presence: true
   validates :valor, :numericality => { :greater_than_or_equal_to => 0 }
 
+  def valor_to_s
+    "R$ #{self.valor/100},00"
+  end
+
 
 end

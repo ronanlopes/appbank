@@ -1,3 +1,6 @@
+- if @usuario.conta.ativo == false
+  div class="alert alert-warning" role="alert"
+    = "Sua conta foi desativada em #{@usuario.conta.desativado_data.strftime("%d/%m/%Y")}"
 .container.target
   .row-eq-height
     .col-sm-3
@@ -27,8 +30,12 @@
       ul.list-group
         li.list-group-item.text-muted contenteditable="false"  Gerenciar Conta
         li.list-group-item
-          ul
-            li Encerrar Conta
+          - if @usuario.conta.ativo         
+            ul
+              li = link_to "Encerrar Conta", encerrar_conta_path(id: @usuario.conta), method: :post
+          - else
+            ul
+              li = link_to "Reabrir Conta", reabrir_conta_path(id: @usuario.conta), method: :post
 
     /! /col-3
     .col-sm-9 contenteditable="false" style=""
@@ -48,4 +55,4 @@
                 td = movimentacao.created_at.strftime("%d/%m/%Y às %H:%M")
                 td = movimentacao.tipo_movimentacao.nome
                 td = movimentacao.conta_destino.try(:user).try(:nome)
-                td = movimentacao.valor
+                td = movimentacao.valor_to_s

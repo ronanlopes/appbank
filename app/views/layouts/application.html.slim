@@ -28,10 +28,10 @@ html lang="en"
                 = "<span class=\"glyphicon glyphicon-th-list\"></span> Transações".html_safe
                 b.caret
               ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"
-                - if current_user  
+                - if current_user && current_user.conta && current_user.conta.ativo
                   li= link_to "<span class=\"glyphicon glyphicon glyphicon-circle-arrow-right\"></span> Saque".html_safe, saque_index_path
                 li= link_to "<span class=\"glyphicon glyphicon glyphicon-circle-arrow-right\"></span> Depósito".html_safe, deposito_index_path
-                - if current_user
+                - if current_user && current_user.conta && current_user.conta.ativo
                   li= link_to "<span class=\"glyphicon glyphicon glyphicon-circle-arrow-right\"></span> Transferência".html_safe, transferencia_index_path
                   li= link_to "<span class=\"glyphicon glyphicon glyphicon-circle-arrow-right\"></span> Extrato por período".html_safe, extrato_index_path
             - if current_user

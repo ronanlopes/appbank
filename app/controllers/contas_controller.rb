@@ -1,6 +1,11 @@
 class ContasController < ApplicationController
 
   before_action :authenticate_user!, except: [:deposito_index, :realizar_deposito]
+  before_action :check_conta_ativo, only: [:saque, :transferencia, :realizar_saque, :realizar_transferencia]
+
+  def check_conta_ativo
+    redirect_to minha_conta_index_path if !current_user.conta.ativo
+  end
 
   def saque_index 
     @saque = Movimentacao.new 
@@ -48,6 +53,21 @@ class ContasController < ApplicationController
     else
       redirect_to transferencia_index_path, flash: { error: erros }
     end
+  end
+
+  def encerrar_conta
+    conta = Conta.find(params[:id])
+    conta.ativo = false
+    conta.desativado_data = Date.today
+    conta.save
+    redirect_to minha_conta_index_path
+  end
+
+  def reabrir_conta
+    conta = Conta.find(params[:id])
+    conta.ativo = true
+    conta.save
+    redirect_to minha_conta_index_path
   end
 
 end

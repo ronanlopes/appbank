@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   post '/realizar_saque' => 'contas#realizar_saque', as: :realizar_saque
   post '/realizar_deposito' => 'contas#realizar_deposito', as: :realizar_deposito
   post '/realizar_transferencia' => 'contas#realizar_transferencia', as: :realizar_transferencia
+  post '/encerrar_conta' => 'contas#encerrar_conta', as: :encerrar_conta
+  post '/reabrir_conta' => 'contas#reabrir_conta', as: :reabrir_conta
 
 
 end
