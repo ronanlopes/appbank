@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151202190556) do
+ActiveRecord::Schema.define(version: 20151203014507) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 20151202190556) do
   add_index "contas", ["user_id"], name: "index_contas_on_user_id", using: :btree
 
   create_table "movimentacoes", force: :cascade do |t|
-    t.datetime "data"
     t.integer  "valor"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false

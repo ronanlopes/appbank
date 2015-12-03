@@ -18,15 +18,17 @@ html lang="en"
           span.icon-bar
         .navbar-collapse.collapse.navbar-responsive-collapse
           ul.nav.navbar-nav
-            li= link_to "<span class=\"glyphicon glyphicon glyphicon-home\"></span> Home".html_safe, "/"
+            li= link_to "<span class=\"glyphicon glyphicon glyphicon-home\"></span> Página Inicial".html_safe, "/"
             li.dropdown
               a.dropdown-toggle data-toggle="dropdown" href="#" 
-                = "<span class=\"glyphicon glyphicon-th-list\"></span> Cadastros".html_safe
+                = "<span class=\"glyphicon glyphicon-th-list\"></span> Transações".html_safe
                 b.caret
               ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"
-                li= link_to "<span class=\"glyphicon glyphicon glyphicon-circle-arrow-right\"></span> Clientes".html_safe, "/"
-                li= link_to "<span class=\"glyphicon glyphicon glyphicon-circle-arrow-right\"></span> Equipes".html_safe, "/"
-            li= link_to "<span class=\"glyphicon glyphicon-off\"></span> Logout".html_safe, destroy_user_session_path,:method => :delete
+                li= link_to "<span class=\"glyphicon glyphicon glyphicon-circle-arrow-right\"></span> Saque".html_safe, saque_index_path
+                li= link_to "<span class=\"glyphicon glyphicon glyphicon-circle-arrow-right\"></span> Depósito".html_safe, deposito_index_path
+                li= link_to "<span class=\"glyphicon glyphicon glyphicon-circle-arrow-right\"></span> Transferência".html_safe, transferencia_index_path
+                li= link_to "<span class=\"glyphicon glyphicon glyphicon-circle-arrow-right\"></span> Extrato".html_safe, extrato_index_path
+            li= link_to "<span class=\"glyphicon glyphicon-off\"></span> Sair".html_safe, destroy_user_session_path,:method => :delete
     .container
       .row
         .col-lg-12

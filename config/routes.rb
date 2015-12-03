@@ -10,4 +10,13 @@ Rails.application.routes.draw do
     end
   end
 
+  get '/saque' => 'contas#saque_index', as: :saque_index
+  get '/deposito' => 'contas#deposito_index', as: :deposito_index
+  get '/transferencia' => 'contas#transferencia_index', as: :transferencia_index
+  get '/extrato' => 'contas#extrato_index', as: :extrato_index
+  post '/realizar_saque' => 'contas#realizar_saque', as: :realizar_saque
+  post '/realizar_deposito' => 'contas#realizar_deposito', as: :realizar_deposito
+  post '/realizar_transferencia' => 'contas#realizar_transferencia', as: :realizar_transferencia
+
+
 end

@@ -1,0 +1,17 @@
+h3 Extrato
+table class="table table-striped" id="extrato"
+  thead
+    tr
+      th Data
+      th Tipo de Movimentação
+      th Origem
+      th Destino
+      th Valor
+  tbody class="extrato-index"
+  - @movimentacoes.each do |movimentacao|
+    tr
+      td = movimentacao.created_at
+      td = movimentacao.tipo_movimentacao.nome
+      td = movimentacao.conta_origem.try(:user).try(:nome)
+      td = movimentacao.conta_destino.try(:user).try(:nome)
+      td = movimentacao.valor
