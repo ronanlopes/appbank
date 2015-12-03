@@ -4,10 +4,12 @@ html lang="en"
   	meta charset="utf-8"
     meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
-    title= content_for?(:title) ? yield(:title) : "Rails - Projeto Base"
+    title= content_for?(:title) ? yield(:title) : "Integra - Bankline"
     = csrf_meta_tags
     = stylesheet_link_tag "application", :media => "all", 'data-turbolinks-track' => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
+    = favicon_link_tag 'favicon.png', :rel => 'shortcut icon'
+
 
   body
     .navbar.navbar-default.navbar-static-top
@@ -16,19 +18,25 @@ html lang="en"
           span.icon-bar
           span.icon-bar
           span.icon-bar
+        a href="/"
+          = image_tag("logo.png", alt: "Logotipo Integra", class: "nav-logo")
+          span class="navbar-brand" Integra Bankline
         .navbar-collapse.collapse.navbar-responsive-collapse
           ul.nav.navbar-nav
-            li= link_to "<span class=\"glyphicon glyphicon glyphicon-home\"></span> Página Inicial".html_safe, "/"
             li.dropdown
               a.dropdown-toggle data-toggle="dropdown" href="#" 
                 = "<span class=\"glyphicon glyphicon-th-list\"></span> Transações".html_safe
                 b.caret
               ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"
-                li= link_to "<span class=\"glyphicon glyphicon glyphicon-circle-arrow-right\"></span> Saque".html_safe, saque_index_path
+                - if current_user  
+                  li= link_to "<span class=\"glyphicon glyphicon glyphicon-circle-arrow-right\"></span> Saque".html_safe, saque_index_path
                 li= link_to "<span class=\"glyphicon glyphicon glyphicon-circle-arrow-right\"></span> Depósito".html_safe, deposito_index_path
-                li= link_to "<span class=\"glyphicon glyphicon glyphicon-circle-arrow-right\"></span> Transferência".html_safe, transferencia_index_path
-                li= link_to "<span class=\"glyphicon glyphicon glyphicon-circle-arrow-right\"></span> Extrato".html_safe, extrato_index_path
-            li= link_to "<span class=\"glyphicon glyphicon-off\"></span> Sair".html_safe, destroy_user_session_path,:method => :delete
+                - if current_user
+                  li= link_to "<span class=\"glyphicon glyphicon glyphicon-circle-arrow-right\"></span> Transferência".html_safe, transferencia_index_path
+                  li= link_to "<span class=\"glyphicon glyphicon glyphicon-circle-arrow-right\"></span> Extrato".html_safe, extrato_index_path
+            - if current_user
+              li= link_to "<span class=\"glyphicon glyphicon-user\"></span> Minha Conta".html_safe, minha_conta_index_path              
+              li= link_to "<span class=\"glyphicon glyphicon-off\"></span> Sair".html_safe, destroy_user_session_path,:method => :delete
     .container
       .row
         .col-lg-12

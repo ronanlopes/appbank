@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
 
   has_many :movimentacoes, through: :conta
 
+  validates :email, uniqueness: true
+  
   before_create :create_conta
 
   def create_conta

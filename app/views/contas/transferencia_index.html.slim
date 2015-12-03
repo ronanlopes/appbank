@@ -1,6 +1,6 @@
 h3 Transferência
 = simple_form_for @transferencia, url: realizar_transferencia_path do |f|
-  = f.association :conta_destino, label_method: lambda {|conta| conta.user.nome}
+  = f.association :conta_destino, label_method: lambda {|conta| conta.user.nome}, include_blank: false
   = f.input :valor
   = f.submit
 end

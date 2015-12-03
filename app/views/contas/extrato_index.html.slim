@@ -1,17 +1,24 @@
 h3 Extrato
+br
+h4 Período:
+= simple_form_for :extrato, url: extrato_index_path do |f|
+  = f.datetime_field :data_inicio
+  '
+  '/
+  = f.datetime_field :data_fim
+  = f.submit "Filtrar"
+
 table class="table table-striped" id="extrato"
   thead
     tr
-      th Data
+      th Horário
       th Tipo de Movimentação
-      th Origem
-      th Destino
+      th Titular da Conta
       th Valor
   tbody class="extrato-index"
   - @movimentacoes.each do |movimentacao|
     tr
-      td = movimentacao.created_at
+      td = movimentacao.created_at.strftime("%d/%m/%Y às %H:%M")
       td = movimentacao.tipo_movimentacao.nome
-      td = movimentacao.conta_origem.try(:user).try(:nome)
       td = movimentacao.conta_destino.try(:user).try(:nome)
       td = movimentacao.valor

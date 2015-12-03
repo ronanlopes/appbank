@@ -1,0 +1,51 @@
+.container.target
+  .row-eq-height
+    .col-sm-3
+      = image_tag("http://pcdoctorti.com.br/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png", class: "profilepic")
+    .col-sm-4.col-md-10
+      .profileinfo
+        blockquote
+          h2 = @usuario.nome
+  br/
+  .row
+    .col-sm-3
+      /! left col
+      ul.list-group
+        li.list-group-item.text-muted contenteditable="false"  Informações
+        li.list-group-item.text-right
+          span.pull-left
+            strong Saldo:
+          = @usuario.conta.saldo_to_s
+        li.list-group-item.text-right
+          span.pull-left
+            strong Membro desde:
+          = @usuario.created_at.strftime("%d/%m/%Y")
+        li.list-group-item.text-right
+          span.pull-left
+            strong Último login:
+          = @usuario.last_sign_in_at.strftime("%d/%m/%Y")
+      ul.list-group
+        li.list-group-item.text-muted contenteditable="false"  Gerenciar Conta
+        li.list-group-item
+          ul
+            li Encerrar Conta
+
+    /! /col-3
+    .col-sm-9 contenteditable="false" style=""
+      .panel.panel-default
+        .panel-heading Extrato/Mês
+        .panel-body
+          table class="table table-striped" id="extrato"
+            thead
+              tr
+                th Horário
+                th Tipo de Movimentação
+                th Titular da Conta
+                th Valor
+            tbody class="extrato-index"
+            - @usuario.conta.extrato.each do |movimentacao|
+              tr
+                td = movimentacao.created_at.strftime("%d/%m/%Y às %H:%M")
+                td = movimentacao.tipo_movimentacao.nome
+                td = movimentacao.conta_destino.try(:user).try(:nome)
+                td = movimentacao.valor

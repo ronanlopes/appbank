@@ -1,5 +1,7 @@
 class ContasController < ApplicationController
 
+  before_action :authenticate_user!, except: [:deposito_index, :realizar_deposito]
+
   def saque_index 
     @saque = Movimentacao.new 
   end
@@ -13,7 +15,13 @@ class ContasController < ApplicationController
   end
 
   def extrato_index
-    @movimentacoes = current_user.conta.movimentacoes
+    data_inicio = params[:extrato][:data_inicio].try(:to_datetime) if params[:extrato]
+    data_fim = params[:extrato][:data_fim].try(:to_datetime) if params[:extrato]
+    @movimentacoes = current_user.conta.extrato(data_inicio, data_fim)
+  end
+
+  def minha_conta_index
+    @usuario = current_user
   end
 
   def realizar_saque
@@ -26,7 +34,7 @@ class ContasController < ApplicationController
   end
 
   def realizar_deposito
-    if current_user.conta.deposito(params["movimentacao"]["valor"].to_i)
+    if Conta.deposito(Conta.find(params["movimentacao"]["conta_destino_id"].to_i), params["movimentacao"]["valor"].to_i)
       redirect_to deposito_index_path, notice: 'Depósito realizado com sucesso.'
     else
       redirect_to deposito_index_path, notice: 'Não foi possível realizar o depósito.'

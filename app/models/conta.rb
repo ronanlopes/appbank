@@ -1,8 +1,7 @@
 class Conta < ActiveRecord::Base
 
+  default_scope { where(ativo: true) }
   belongs_to :user
-  has_many :movimentacoes_origem, :class_name => 'Movimentacao', :foreign_key => :conta_origem_id
-  has_many :movimentacoes_destino, :class_name => 'Movimentacao', :foreign_key => :conta_destino_id  
 
   #Verificar i18n
   validates :saldo, :numericality => { :greater_than_or_equal_to => 0 }
@@ -12,14 +11,14 @@ class Conta < ActiveRecord::Base
   end
 
   def movimentacoes
-    movimentacoes_origem + movimentacoes_destino
+    Movimentacao.where("conta_origem_id = ? OR conta_destino_id = ?", self.id, self.id)
   end
 
-  def deposito(valor)
+  def self.deposito(conta, valor)
     Conta.transaction do
-      self.saldo += valor
-      self.save!
-      movimentacao = Movimentacao.new(conta_origem_id: self.id, conta_destino_id: self.id, valor: valor, tipo_movimentacao_id: TipoMovimentacao.get_id_by_nome("Depósito"))
+      conta.saldo += valor
+      conta.save!
+      movimentacao = Movimentacao.new(conta_destino_id: conta.id, valor: valor, tipo_movimentacao_id: TipoMovimentacao.get_id_by_nome("Depósito"))
       movimentacao.save!
     end
   end
@@ -36,10 +35,26 @@ class Conta < ActiveRecord::Base
       return exception.message
   end
 
+  def horario_comercial
+    hora = DateTime.now.hour
+    if Array(2..6).include? DateTime.now.wday && (hora >= 9 && hora <= 18)
+      return true
+    else
+      return false
+    end
+  end
+
   def self.transferencia(conta_origem, conta_destino, valor)
-    #Essa deve ser uma transação atômica
+    
+    taxa = 0
+    taxa += 10 if valor > 1000
+    if horario_comercial
+      taxa+=5
+    else
+      taxa+=7
+    end
     Conta.transaction do
-      conta_origem.saldo -= valor
+      conta_origem.saldo -= (valor+taxa)
       conta_destino.saldo += valor
       conta_origem.save!
       conta_destino.save!
@@ -51,7 +66,8 @@ class Conta < ActiveRecord::Base
       return exception.message
   end
 
-  def extrato(data_inicio, data_fim)
+  def extrato(data_inicio = DateTime.now.strftime("01/%m/%Y").to_datetime, data_fim = DateTime.now)
+    self.movimentacoes.where(created_at: data_inicio..data_fim)
   end
 
 
