@@ -6,4 +6,12 @@ class User < ActiveRecord::Base
 
   has_one :conta
 
+  has_many :movimentacoes, through: :conta
+
+  before_create :create_conta
+
+  def create_conta
+    self.build_conta({saldo: 0})
+  end
+
 end

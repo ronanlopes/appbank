@@ -28,6 +28,8 @@ gem 'slim-rails'
 gem "twitter-bootstrap-rails", :git => 'http://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'simple_form'
 gem 'thin'
+gem 'rails_12factor', group: :production
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -51,3 +53,4 @@ group :development do
   gem 'spring'
 end
 
+ruby "2.2.2"
