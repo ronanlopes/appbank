@@ -48,4 +48,11 @@ group :development do
   gem 'spring'
 end
 
+gem "rspec-rails", :group => [:test, :development]
+group :test do
+  gem "factory_girl_rails"
+  gem "capybara"
+  gem "guard-rspec"
+end
+
 ruby "2.2.2"
