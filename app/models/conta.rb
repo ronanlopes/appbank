@@ -20,7 +20,10 @@ class Conta < ActiveRecord::Base
       conta.save!
       movimentacao = Movimentacao.new(conta_destino_id: conta.id, valor: valor, tipo_movimentacao_id: TipoMovimentacao.get_id_by_nome("Depósito"))
       movimentacao.save!
+      return nil
     end
+    rescue ActiveRecord::RecordInvalid => exception
+      return exception.message
   end
 
   def saque(valor)

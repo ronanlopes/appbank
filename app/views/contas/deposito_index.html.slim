@@ -1,6 +1,6 @@
 h3 Depósito
 = simple_form_for @deposito, url: realizar_deposito_path do |f|
-  = f.input :valor
+  = f.input :valor, input_html: { class: 'currency' }, as: :string
   = f.association :conta_destino, collection: Conta.ativo, label_method: lambda {|conta| conta.user.nome}, include_blank: false, input_html: {class: 'chosen-select'}
   = f.submit "Realizar Depósito", class: 'btn-primary'
 end

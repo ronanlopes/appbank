@@ -11,13 +11,13 @@
   $('.chosen-select').chosen('destroy').chosen
     placeholder_text_single: 'Selecione'
     no_results_text: 'Nenhum resultado encontrado'
-    placeholder_text_multiple: 'Selecione'
 
-
-#Adicionar inicializações nesta função para compatibilidade com o turbolinks
 @do_on_load = () ->
-  $.mask.masks.date = { mask : '39/19/9999' }
-  atualizar_chosen()
+  $.mask.masks.date = { mask : '39/19/9999' };
+  $.mask.masks.currency = { mask : '99,999.999.999.999', type : 'reverse', defaultValue: '000'};
+  $(".dateinput").setMask("date")
+  $(".currency").setMask("currency")
+
 
 $ ->
   do_on_load()

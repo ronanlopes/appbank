@@ -45,7 +45,7 @@ class ContasController < ApplicationController
   end
 
   def realizar_saque
-    erros = current_user.conta.saque(params["movimentacao"]["valor"].to_i)
+    erros = current_user.conta.saque(params["movimentacao"]["valor"].delete(',').delete('.').to_i)
     if erros.nil?
       redirect_to saque_index_path, notice: 'Saque realizado com sucesso.'
     else
@@ -54,15 +54,16 @@ class ContasController < ApplicationController
   end
 
   def realizar_deposito
-    if Conta.deposito(Conta.find(params["movimentacao"]["conta_destino_id"].to_i), params["movimentacao"]["valor"].to_i)
+    erros = Conta.deposito(Conta.find(params["movimentacao"]["conta_destino_id"].delete(',').delete('.').to_i), params["movimentacao"]["valor"].to_i)
+    if erros.nil?
       redirect_to deposito_index_path, notice: 'Depósito realizado com sucesso.'
     else
-      redirect_to deposito_index_path, notice: 'Não foi possível realizar o depósito.'
+      redirect_to deposito_index_path, flash: { error: erros }
     end
   end
 
   def realizar_transferencia
-    erros = Conta.transferencia(current_user.conta, Conta.find(params["movimentacao"]["conta_destino_id"].to_i), params["movimentacao"]["valor"].to_i)
+    erros = Conta.transferencia(current_user.conta, Conta.find(params["movimentacao"]["conta_destino_id"].delete(',').delete('.').to_i), params["movimentacao"]["valor"].to_i)
     if erros.nil?
       redirect_to transferencia_index_path, notice: 'Transferência realizada com sucesso.'
     else

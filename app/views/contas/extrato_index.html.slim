@@ -2,10 +2,10 @@ h3 Extrato
 br
 h4 Período:
 = simple_form_for :extrato, url: extrato_index_path do |f|
-  = f.input :data_inicio, input_html: { class: "date"}, :as => :string
+  = f.datetime_field :data_inicio, class: "dateinput", :as => :string
   '
   '/
-  = f.input :data_fim, input_html: { class: "date"}, :as => :string
+  = f.datetime_field :data_fim, class: "dateinput", :as => :string
   = f.submit "Filtrar", class: 'btn-primary'
 br
 h5 = "Exibindo saldo para o período #{@data_inicio.strftime("%d/%m/%Y")} - #{@data_fim.strftime("%d/%m/%Y")}"
@@ -22,4 +22,4 @@ table class="table table-striped" id="extrato"
       td = movimentacao.created_at.strftime("%d/%m/%Y às %H:%M")
       td = movimentacao.tipo_movimentacao.nome
       td = movimentacao.conta_destino.try(:user).try(:nome)
-      td = movimentacao.valor
+      td = movimentacao.valor_to_s
